@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+        #content{
+            min-width: 450px;
+            /* 1. 让padding-left和padding-right各留出来200px */
+            /* 相对应的内容区也减少了 */
+            padding-left:200px;
+            padding-right:200px;
+
+
+            height:100%;
+            background-color:lightcoral;
+        }
+        #middle{
+            float:left;
+            width:100%;
+            height:100%;
+            background-color: lightgreen;
+        }
+        #left{
+            /* 2.相对于自己本来应该在的位置定位 */
+            position:relative;
+            /* 3.将自身往左边拉 */
+            left:-200px;
+
+            margin-left:-100%;
+            float:left;
+            width:200px;
+            height:100%;
+            background-color:blueviolet;
+        }
+        #right{
+             /* 2.相对于自己本来应该在的位置定位 */
+             position:relative;
+            /* 3.将自身往右边拉 */
+            right:-200px;
+
+            margin-left:-200px;
+            float:left;
+            width:200px;
+            height:100%;
+            background-color:skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div id="middle">
+            !这里是中间的内容这里是中间的内容这里是中间的内容这里是中间的内容这里是中间的内容这里是中间的内容这里是中间的内容这里是中间的内容这里是中间的内容这里是中间的内容这里是中间的内容这里是中间的内容这里是中间的内容这里是中间的内容这里是中间的内容这里是中间的内容
+        </div>
+        <div id="left">左边</div>
+        <div id="right">右边</div>
+    </div>
+</body>
+
+</html>

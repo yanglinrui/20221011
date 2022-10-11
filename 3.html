@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html,body{
+                margin:0;
+                height: 100%;
+                background-color: #494A5F;
+            }
+            ul{
+                position:absolute;
+                left:50%;
+                top:50%;
+                transform: translate(-50%,-50%);
+
+                width:960px;
+                height:240px;
+                border:1px solid red;
+
+                margin:0;
+                padding:0;
+                list-style-type: none;
+            }
+            ul li{
+                position:relative;
+                float:left;
+                margin-left:6px;
+                width:230px;
+                height:240px;
+                border:1px solid yellow;
+                background-color:#2C3E50;
+                /* box-sizing: border-box; */
+            }
+            ul li div{
+                position:absolute;
+                left:50%;
+                top:50%;
+                transform: translate(-50%,-50%);
+                width:80px;
+                height:50px;
+                border:1px solid blue;
+            }
+            /* 设置里面的三道杠 */
+            ul li div span{
+                display:block;
+                margin-top:10px;
+                width:100%;
+                height:10px;
+                background-color: #FFF;
+                border-radius: 2px;
+            }
+            ul li div span:first-child{
+                margin-top:0;
+            }
+
+            /* 第一种情况 */
+            ul li:first-of-type:hover div span{
+                position:absolute;
+                top:50%;
+                margin-top:-5px;
+            }
+            /* 有一个得先隐藏起来 */
+            ul li:first-of-type:hover div span:nth-of-type(2){
+                display: none;
+            }
+            ul li:first-of-type:hover div span:first-of-type{
+                transform:rotate(45deg);
+            }
+            ul li:first-of-type:hover div span:last-of-type{
+                transform:rotate(-45deg);
+            }
+            ul li:first-of-type:hover div span:first-of-type,ul li:first-of-type:hover div span:last-of-type{
+                transition:transform .5s linear;
+            }
+            /* 第二种情况 */
+            ul li:nth-of-type(2):hover div span:first-of-type,ul li:nth-of-type(2):hover div span:last-of-type{
+                background-color:transparent;
+                transition:background-color .5s linear;
+            }
+            /* 第三种情况 */
+            ul li:nth-of-type(3):hover div span{
+                position:absolute;
+                top:50%;
+                margin-top:-5px;
+            }
+            ul li:nth-of-type(3):hover div span:first-of-type{
+                transform:rotate(30deg);
+            }
+            ul li:nth-of-type(3):hover div span:last-of-type{
+                transform:rotate(-30deg);
+            }ul li:nth-of-type(3):hover div span:first-of-type, ul li:nth-of-type(3):hover div span:last-of-type{
+                left:2px;
+                width:40px;
+                transform-origin: 0 50%;
+
+                transition-property: width,transform;
+                transition-duration: .5s;
+                transition-timing-function: linear;
+            }
+            /* 第四种情况 */
+            ul li:nth-of-type(4):hover div span{
+                position:absolute;
+                top:50%;
+                margin-top:-5px;
+            }
+            ul li:nth-of-type(4):hover div span:first-of-type{
+                transform:rotate(30deg);
+            }
+            ul li:nth-of-type(4):hover div span:last-of-type{
+                transform:rotate(-30deg);
+            }ul li:nth-of-type(4):hover div span:first-of-type, ul li:nth-of-type(4):hover div span:last-of-type{
+                left:38px;
+                width:40px;
+                transform-origin: 100% 50%;
+
+                transition-property: width,transform;
+                transition-duration: .5s;
+                transition-timing-function: linear;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </li>
+        </ul>
+    </body>
+</html>

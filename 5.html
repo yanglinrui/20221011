@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html,body{
+                margin:0;
+                height:100%;
+            }
+            #content{
+                position: relative;
+                width:100%;
+                height:100%;
+                background-color: lightcoral;
+            }
+            #left{
+                width:300px;
+                height:100%;
+                background-color:lightseagreen;
+            }
+            #right{
+                /* 
+                
+                容纳块宽度+padding = left + margin-left + border-left + padding-left + width + padding-right + border-right + margin-right + right
+                850+0 = 0 + 300 + 0 + 0 + x + 0 + 0 + 0 + 0
+                850=300+x
+                x = 850-300
+                 */
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                margin-left:300px;
+                background-color:lightskyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <div id="left">左边</div>
+            <div id="right">右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边右边</div>
+        </div>
+    </body>
+</html>

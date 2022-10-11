@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #f{
+                position:relative;
+                margin-left:100px;
+                margin-top:200px;
+                width:180px;
+                height:200px;
+                /* border:1px solid red; */
+            }
+            #f::before{
+                content:'';
+                position:absolute;
+                top:-8px;
+                right:10px;
+                width:0;
+                height:0;
+                border:10px solid transparent;
+                box-shadow: 1px -1px 0px #ccc;
+                transform: rotate(-45deg);
+
+                /* 默认的时候背景延伸到了边框的外边界，边框还是透明的，所以你的设置的背景是白色的时候正好将由边框组成的这个正方形的颜色给修改了 */
+                background-color:#FFF;
+                /* border-color:#FFF; */
+            }
+            #z{
+                width:100%;
+                height:100%;
+                border:1px solid #CCC;
+                border-radius: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="f">
+            <div id="z"></div>
+        </div>
+
+        <!-- <div style="width:200px;height:200px;border:10px dotted transparent;background-color:pink;"></div> -->
+    </body>
+</html>
